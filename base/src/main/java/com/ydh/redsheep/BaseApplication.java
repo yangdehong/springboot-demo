@@ -1,8 +1,10 @@
 package com.ydh.redsheep;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@MapperScan(basePackages = "com.ydh.redsheep.*.mapper")
 @SpringBootApplication
 public class BaseApplication {
 

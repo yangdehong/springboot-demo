@@ -11,7 +11,6 @@ import java.util.List;
  * @author: yangdehong
  * @version: 2017/9/22.
  */
-@Mapper
 public interface UserMapper {
 
     List<User> list();

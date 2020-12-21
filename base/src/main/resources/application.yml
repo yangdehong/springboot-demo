@@ -26,6 +26,12 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+mybatis:
+  configuration:
+    map-underscore-to-camel-case=true: true # 返回结果驼峰
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.ydh.redsheep.base.pojo
+
 #日志
 #logging:
 #  config: classpath:logback-spring.xml
@@ -55,7 +61,6 @@ logging:
 sys:
   logging:
     path: F:/logs/jure/${spring.application.name}/${spring.application.name}.log
-
 
 #############自定义配置##################################
 #自定义参数配置
