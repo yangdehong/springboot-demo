@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> list() {
-        return userMapper.list();
+        return userMapper.selectAll();
     }
 
     @Transactional
