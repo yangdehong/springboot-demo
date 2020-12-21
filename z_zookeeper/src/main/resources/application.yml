@@ -1,0 +1,10 @@
+#服务参数配置
+server:
+  port: 80 #端口
+  context-path: / #项目名称
+
+zookeeper:
+  zkServer: 192.168.2.144:2181
+
+
+

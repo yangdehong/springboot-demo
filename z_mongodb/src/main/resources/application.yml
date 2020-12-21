@@ -1,0 +1,13 @@
+#服务参数配置
+server:
+  port: 8999
+  servlet:
+    context-path: /
+spring:
+  data:
+    mongodb:
+      host: dds-bp163b4104f0acb4-pub.mongodb.rds.aliyuncs.com
+      port: 3717
+      database: admin
+      password: 20170915Mongo
+      username: root

@@ -1,0 +1,885 @@
+2020-12-20 10:32:53.352 - WARN - InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:32:58.360 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 43194 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:32:58.361 - INFO - The following profiles are active: dev
+2020-12-20 10:32:58.406 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@77128dab
+2020-12-20 10:32:59.892 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:32:59.927 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:33:00.073 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:33:00.080 - INFO - Adding welcome page template: index
+2020-12-20 10:33:00.169 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:33:00.195 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:33:01.082 - ERROR - Error while adding the mapper 'interface com.ydh.redsheep.base.mapper.UserMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:169)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:120)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:706)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:78)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:112)
+	... 87 common frames omitted
+2020-12-20 10:33:01.084 - WARN - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/Users/yangdehong/IdeaProjects/springboot/base/target/classes/com/ydh/redsheep/base/mapper/UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+2020-12-20 10:33:01.086 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:33:01.101 - INFO - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-20 10:33:01.108 - ERROR - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/Users/yangdehong/IdeaProjects/springboot/base/target/classes/com/ydh/redsheep/base/mapper/UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:84)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:169)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:120)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:706)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	... 81 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:78)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:112)
+	... 87 common frames omitted
+2020-12-20 10:33:01.112 - ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1698fc68] to prepare test instance [com.ydh.redsheep.UserTests@13250132]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/Users/yangdehong/IdeaProjects/springboot/base/target/classes/com/ydh/redsheep/base/mapper/UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:84)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:169)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:120)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:706)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	... 81 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:78)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:112)
+	... 87 common frames omitted
+2020-12-20 10:34:19.184 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:34:24.188 - INFO - Starting PersonTests on MacBook-Pro-4.local with PID 43268 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:34:24.189 - INFO - The following profiles are active: dev
+2020-12-20 10:34:24.234 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64f555e7
+2020-12-20 10:34:25.917 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:34:25.939 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:34:26.049 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:34:26.056 - INFO - Adding welcome page template: index
+2020-12-20 10:34:26.120 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:34:26.146 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:34:26.587 - ERROR - Error while adding the mapper 'interface com.ydh.redsheep.base.mapper.UserMapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:169)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:120)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:706)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:78)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:112)
+	... 87 common frames omitted
+2020-12-20 10:34:26.590 - WARN - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/Users/yangdehong/IdeaProjects/springboot/base/target/classes/com/ydh/redsheep/base/mapper/UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+2020-12-20 10:34:26.592 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:34:26.607 - INFO - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-20 10:34:26.611 - ERROR - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/Users/yangdehong/IdeaProjects/springboot/base/target/classes/com/ydh/redsheep/base/mapper/UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:84)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:169)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:120)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:706)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	... 81 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:78)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:112)
+	... 87 common frames omitted
+2020-12-20 10:34:26.616 - ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1698fc68] to prepare test instance [com.ydh.redsheep.PersonTests@5a4dda2]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userMapper' defined in file [/Users/yangdehong/IdeaProjects/springboot/base/target/classes/com/ydh/redsheep/base/mapper/UserMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:863)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:126)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 63 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:84)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:169)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:120)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:706)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	... 81 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'com.ydh.redsheep.base.mapper.UserMapper' but found 'com.ydh.redsheep.base.mapper.DogMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:78)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:112)
+	... 87 common frames omitted
+2020-12-20 10:35:58.829 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:36:03.838 - INFO - Starting PersonTests on MacBook-Pro-4.local with PID 43331 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:36:03.839 - INFO - The following profiles are active: dev
+2020-12-20 10:36:03.875 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@18324f97
+2020-12-20 10:36:05.520 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:36:05.557 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:36:05.658 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:36:05.665 - INFO - Adding welcome page template: index
+2020-12-20 10:36:05.778 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:36:05.813 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:36:06.533 - INFO - Started PersonTests in 23.203 seconds (JVM running for 24.738)
+2020-12-20 10:36:07.091 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@18324f97, started on Sun Dec 20 10:36:03 CST 2020
+2020-12-20 10:36:07.100 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:36:51.628 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:36:56.632 - INFO - Starting PersonTests on MacBook-Pro-4.local with PID 43356 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:36:56.633 - INFO - The following profiles are active: dev
+2020-12-20 10:36:56.680 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@c9d82f9
+2020-12-20 10:36:58.694 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:36:58.716 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:36:58.823 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:36:58.829 - INFO - Adding welcome page template: index
+2020-12-20 10:36:58.897 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:36:58.915 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:36:59.665 - INFO - Started PersonTests in 23.84 seconds (JVM running for 25.115)
+2020-12-20 10:36:59.974 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@c9d82f9, started on Sun Dec 20 10:36:56 CST 2020
+2020-12-20 10:36:59.986 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:37:55.537 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:38:00.543 - INFO - Starting PersonTests on MacBook-Pro-4.local with PID 43405 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:38:00.543 - INFO - The following profiles are active: dev
+2020-12-20 10:38:00.574 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3eb631b8
+2020-12-20 10:38:02.108 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:38:02.136 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:38:02.248 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:38:02.258 - INFO - Adding welcome page template: index
+2020-12-20 10:38:02.342 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:38:02.360 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:38:02.952 - INFO - Started PersonTests in 22.934 seconds (JVM running for 25.333)
+2020-12-20 10:38:03.260 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@3eb631b8, started on Sun Dec 20 10:38:00 CST 2020
+2020-12-20 10:38:03.271 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:39:30.583 - WARN - InetAddress.getLocalHost().getHostName() took 5007 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:39:35.596 - INFO - Starting BaseApplicationTests on MacBook-Pro-4.local with PID 43474 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:39:35.597 - INFO - The following profiles are active: dev
+2020-12-20 10:39:35.664 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@70e659aa
+2020-12-20 10:39:37.582 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:39:37.613 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:39:37.721 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:39:37.727 - INFO - Adding welcome page template: index
+2020-12-20 10:39:37.800 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:39:37.821 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:39:38.513 - INFO - Started BaseApplicationTests in 23.411 seconds (JVM running for 24.81)
+2020-12-20 10:39:38.748 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@70e659aa, started on Sun Dec 20 10:39:35 CST 2020
+2020-12-20 10:39:38.754 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:40:33.175 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:40:38.181 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 43505 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:40:38.182 - INFO - The following profiles are active: dev
+2020-12-20 10:40:38.211 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6719a5b8
+2020-12-20 10:40:39.519 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:40:39.540 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:40:39.628 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:40:39.634 - INFO - Adding welcome page template: index
+2020-12-20 10:40:39.700 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:40:39.722 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:40:40.293 - INFO - Started UserTests in 22.723 seconds (JVM running for 24.718)
+2020-12-20 10:40:40.663 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@6719a5b8, started on Sun Dec 20 10:40:38 CST 2020
+2020-12-20 10:40:40.673 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:42:05.168 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:42:10.172 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 43558 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:42:10.172 - INFO - The following profiles are active: dev
+2020-12-20 10:42:10.202 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@18a645fd
+2020-12-20 10:42:12.043 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:42:12.106 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:42:12.252 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:42:12.264 - INFO - Adding welcome page template: index
+2020-12-20 10:42:12.341 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:42:12.360 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:42:12.658 - INFO - Started UserTests in 22.932 seconds (JVM running for 24.503)
+2020-12-20 10:42:48.100 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@18a645fd, started on Sun Dec 20 10:42:10 CST 2020
+2020-12-20 10:42:48.106 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:43:22.776 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:43:27.784 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 43602 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:43:27.784 - INFO - The following profiles are active: dev
+2020-12-20 10:43:27.822 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@488b50ec
+2020-12-20 10:43:29.725 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:43:29.754 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:43:29.859 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:43:29.866 - INFO - Adding welcome page template: index
+2020-12-20 10:43:29.950 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:43:29.975 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:43:30.280 - INFO - Started UserTests in 23.119 seconds (JVM running for 24.598)
+2020-12-20 10:43:31.033 - DEBUG - ==>  Preparing: SELECT * FROM dog 
+2020-12-20 10:43:31.074 - DEBUG - ==> Parameters: 
+2020-12-20 10:43:31.118 - DEBUG - <==      Total: 1
+2020-12-20 10:43:31.176 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@488b50ec, started on Sun Dec 20 10:43:27 CST 2020
+2020-12-20 10:43:31.180 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:44:49.318 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:44:54.325 - INFO - Starting PersonTests on MacBook-Pro-4.local with PID 43650 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:44:54.326 - INFO - The following profiles are active: dev
+2020-12-20 10:44:54.380 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@48e64352
+2020-12-20 10:44:56.306 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:44:56.335 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:44:56.452 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:44:56.458 - INFO - Adding welcome page template: index
+2020-12-20 10:44:56.534 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:44:56.556 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:44:56.852 - INFO - Started PersonTests in 23.064 seconds (JVM running for 24.222)
+2020-12-20 10:44:57.141 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@48e64352, started on Sun Dec 20 10:44:54 CST 2020
+2020-12-20 10:44:57.149 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:45:36.600 - WARN - InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:45:41.606 - INFO - Starting PersonTests on MacBook-Pro-4.local with PID 43678 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:45:41.607 - INFO - The following profiles are active: dev
+2020-12-20 10:45:41.668 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4362d7df
+2020-12-20 10:45:43.907 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:45:43.930 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:45:44.029 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:45:44.038 - INFO - Adding welcome page template: index
+2020-12-20 10:45:44.144 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:45:44.185 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:45:44.526 - INFO - Started PersonTests in 23.466 seconds (JVM running for 24.699)
+2020-12-20 10:45:44.761 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@4362d7df, started on Sun Dec 20 10:45:41 CST 2020
+2020-12-20 10:45:44.765 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:48:11.480 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:48:16.487 - INFO - Starting PersonTests on MacBook-Pro-4.local with PID 43758 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:48:16.488 - INFO - The following profiles are active: dev
+2020-12-20 10:48:16.518 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@213e3629
+2020-12-20 10:48:18.182 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:48:18.205 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:48:18.288 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:48:18.294 - INFO - Adding welcome page template: index
+2020-12-20 10:48:18.354 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:48:18.372 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:48:18.630 - INFO - Started PersonTests in 22.98 seconds (JVM running for 24.905)
+2020-12-20 10:48:18.853 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@213e3629, started on Sun Dec 20 10:48:16 CST 2020
+2020-12-20 10:48:18.869 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:50:35.946 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:50:40.949 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 43860 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:50:40.950 - INFO - The following profiles are active: dev
+2020-12-20 10:50:40.980 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@68809cc7
+2020-12-20 10:50:43.078 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:50:43.116 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:50:43.249 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:50:43.260 - INFO - Adding welcome page template: index
+2020-12-20 10:50:43.405 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:50:43.454 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:50:44.106 - INFO - Started UserTests in 23.652 seconds (JVM running for 25.101)
+2020-12-20 10:50:45.358 - DEBUG - ==>  Preparing: SELECT * FROM dog 
+2020-12-20 10:50:45.411 - DEBUG - ==> Parameters: 
+2020-12-20 10:50:45.465 - DEBUG - <==      Total: 1
+2020-12-20 10:50:45.550 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@68809cc7, started on Sun Dec 20 10:50:40 CST 2020
+2020-12-20 10:50:45.557 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:51:19.533 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:51:24.538 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 43889 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:51:24.540 - INFO - The following profiles are active: dev
+2020-12-20 10:51:24.624 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@425357dd
+2020-12-20 10:51:28.225 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:51:28.255 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:51:28.377 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:51:28.388 - INFO - Adding welcome page template: index
+2020-12-20 10:51:28.471 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:51:28.498 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:51:28.867 - INFO - Started UserTests in 25.257 seconds (JVM running for 27.031)
+2020-12-20 10:51:29.881 - DEBUG - ==>  Preparing: SELECT * FROM dog 
+2020-12-20 10:51:29.926 - DEBUG - ==> Parameters: 
+2020-12-20 10:51:29.983 - DEBUG - <==      Total: 1
+2020-12-20 10:51:30.005 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@425357dd, started on Sun Dec 20 10:51:24 CST 2020
+2020-12-20 10:51:30.011 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:56:13.115 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:56:18.122 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 44043 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:56:18.122 - INFO - The following profiles are active: dev
+2020-12-20 10:56:18.155 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4fdfa676
+2020-12-20 10:56:20.987 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:56:21.010 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:56:21.120 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:56:21.126 - INFO - Adding welcome page template: index
+2020-12-20 10:56:21.186 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:56:21.209 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:56:21.522 - INFO - Started UserTests in 23.961 seconds (JVM running for 25.429)
+2020-12-20 10:56:22.850 - DEBUG - ==>  Preparing: INSERT INTO user(username) VALUES (?) 
+2020-12-20 10:56:22.941 - DEBUG - ==> Parameters: 天(String)
+2020-12-20 10:56:23.035 - DEBUG - <==    Updates: 1
+2020-12-20 10:56:23.084 - DEBUG - ==>  Preparing: SELECT * FROM user 
+2020-12-20 10:56:23.085 - DEBUG - ==> Parameters: 
+2020-12-20 10:56:23.185 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@4fdfa676, started on Sun Dec 20 10:56:18 CST 2020
+2020-12-20 10:56:23.191 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:57:09.712 - WARN - InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:57:14.717 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 44075 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:57:14.717 - INFO - The following profiles are active: dev
+2020-12-20 10:57:14.747 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4837595f
+2020-12-20 10:57:16.513 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:57:16.536 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:57:16.619 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:57:16.624 - INFO - Adding welcome page template: index
+2020-12-20 10:57:16.686 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:57:16.705 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:57:16.977 - INFO - Started UserTests in 22.747 seconds (JVM running for 23.774)
+2020-12-20 10:57:17.674 - DEBUG - ==>  Preparing: SELECT * FROM user 
+2020-12-20 10:57:17.701 - DEBUG - ==> Parameters: 
+2020-12-20 10:57:17.757 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@4837595f, started on Sun Dec 20 10:57:14 CST 2020
+2020-12-20 10:57:17.761 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:58:33.113 - WARN - InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:58:38.117 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 44122 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:58:38.117 - INFO - The following profiles are active: dev
+2020-12-20 10:58:38.155 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@425357dd
+2020-12-20 10:58:40.483 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:58:40.507 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:58:40.617 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:58:40.629 - INFO - Adding welcome page template: index
+2020-12-20 10:58:40.704 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:58:40.723 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:58:41.215 - INFO - Started UserTests in 23.572 seconds (JVM running for 24.592)
+2020-12-20 10:58:42.556 - DEBUG - ==>  Preparing: SELECT * FROM user 
+2020-12-20 10:58:42.601 - DEBUG - ==> Parameters: 
+2020-12-20 10:58:42.686 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@425357dd, started on Sun Dec 20 10:58:38 CST 2020
+2020-12-20 10:58:42.691 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:59:31.300 - WARN - InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 10:59:36.305 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 44153 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 10:59:36.306 - INFO - The following profiles are active: dev
+2020-12-20 10:59:36.355 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@425357dd
+2020-12-20 10:59:39.068 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 10:59:39.092 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 10:59:39.184 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 10:59:39.196 - INFO - Adding welcome page template: index
+2020-12-20 10:59:39.310 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 10:59:39.368 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 10:59:39.768 - INFO - Started UserTests in 24.238 seconds (JVM running for 25.652)
+2020-12-20 10:59:41.070 - DEBUG - ==>  Preparing: SELECT * FROM user 
+2020-12-20 10:59:41.131 - DEBUG - ==> Parameters: 
+2020-12-20 10:59:41.222 - DEBUG - <==      Total: 13
+2020-12-20 10:59:41.249 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@425357dd, started on Sun Dec 20 10:59:36 CST 2020
+2020-12-20 10:59:41.259 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 11:00:45.472 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 11:00:50.479 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 44195 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 11:00:50.480 - INFO - The following profiles are active: dev
+2020-12-20 11:00:50.537 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@600b0b7
+2020-12-20 11:00:53.665 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 11:00:53.697 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 11:00:53.813 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 11:00:53.824 - INFO - Adding welcome page template: index
+2020-12-20 11:00:53.901 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 11:00:53.918 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 11:00:54.242 - INFO - Started UserTests in 24.375 seconds (JVM running for 25.399)
+2020-12-20 11:00:54.987 - DEBUG - ==>  Preparing: INSERT INTO user(username) VALUES (?) 
+2020-12-20 11:00:55.023 - DEBUG - ==> Parameters: 天(String)
+2020-12-20 11:00:55.048 - DEBUG - <==    Updates: 1
+2020-12-20 11:00:55.096 - DEBUG - ==>  Preparing: SELECT * FROM user 
+2020-12-20 11:00:55.097 - DEBUG - ==> Parameters: 
+2020-12-20 11:00:55.141 - DEBUG - <==      Total: 13
+2020-12-20 11:00:55.150 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@600b0b7, started on Sun Dec 20 11:00:50 CST 2020
+2020-12-20 11:00:55.156 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-20 11:01:54.929 - WARN - InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-20 11:01:59.935 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 44243 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-20 11:01:59.935 - INFO - The following profiles are active: dev
+2020-12-20 11:01:59.965 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5be82d43
+2020-12-20 11:02:02.141 - INFO - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-20 11:02:02.168 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-20 11:02:02.260 - DEBUG - 6 mappings in 'requestMappingHandlerMapping'
+2020-12-20 11:02:02.266 - INFO - Adding welcome page template: index
+2020-12-20 11:02:02.326 - DEBUG - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-12-20 11:02:02.342 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-20 11:02:02.639 - INFO - Started UserTests in 23.246 seconds (JVM running for 24.6)
+2020-12-20 11:02:08.594 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5be82d43, started on Sun Dec 20 11:01:59 CST 2020
+2020-12-20 11:02:08.601 - INFO - Shutting down ExecutorService 'applicationTaskExecutor'

@@ -1,0 +1,70 @@
+#############系统配置##################################
+spring:
+  application:
+    name: base
+  profiles:
+    active: dev #设置配置文件
+  datasource:
+    # 驱动配置信息
+    name: mydb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-bp14m38byen9x1gs3mo.mysql.rds.aliyuncs.com:3306/ydh_test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&useSSL=false&allowMultiQueries=true&rewriteBatchedStatements=true&serverTimezone=GMT%2B8
+    username: ai_call_engine
+    password: '#Daily_ai_call_engine'
+    type: com.alibaba.druid.pool.DruidDataSource
+    #连接池的配置信息
+    validationQuery: select 'x'
+    initialSize: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#日志
+#logging:
+#  config: classpath:logback-spring.xml
+#  #logging.path和logging.file这2个属性，只需要配置其中之一即可，如果同时配置，则使用logging.file属性。
+#  #  path: F:/logs/springboot/deeplevel/
+#  file: logs/springboot/deeplevel/deeplevel.log
+##  level.*: debug
+
+logging:
+  file: logs/ydh/${spring.application.name}/${spring.application.name}.log
+  level:
+    com:
+      alibaba:
+        druid: debug
+      jure:
+        fore:
+          dao: debug
+    org:
+      springboot:
+        sample: debug
+      springframework:
+        web: debug
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n)'
+    dateformat: yyyy-MM-dd HH:mm:ss.SSS
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n'
+sys:
+  logging:
+    path: F:/logs/jure/${spring.application.name}/${spring.application.name}.log
+
+
+#############自定义配置##################################
+#自定义参数配置
+person:
+  height: 171cm
+  weight: 62kg
+  name: ydh
+  content: "height: ${person.height}; weight: ${person.weight}; name: ${person.name}"
+  hobby: [ 吃饭,睡觉,打豆豆 ]
+  family: [ father,mother ]
+  map: { k1: v1,k2: v2 }
+  pet: { type: dog,name: 旺财 }
