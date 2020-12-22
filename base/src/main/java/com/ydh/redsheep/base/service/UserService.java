@@ -3,6 +3,7 @@ package com.ydh.redsheep.base.service;
 
 import com.ydh.redsheep.base.pojo.User;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -15,4 +16,6 @@ public interface UserService {
     List<User> list();
 
     void insert();
+
+    void scan();
 }

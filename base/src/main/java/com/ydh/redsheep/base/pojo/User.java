@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -21,7 +22,7 @@ public class User {
     private Integer id;
     private String username;
     private String password;
-    private String birthday;
+    private LocalDateTime birthday;
 
     public User(String username) {
         this.username = username;

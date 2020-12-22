@@ -3,10 +3,12 @@ package com.ydh.redsheep.base.service.impl;
 import com.ydh.redsheep.base.mapper.UserMapper;
 import com.ydh.redsheep.base.pojo.User;
 import com.ydh.redsheep.base.service.UserService;
+import org.apache.ibatis.cursor.Cursor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,5 +35,20 @@ public class UserServiceImpl implements UserService {
         List<String> list = new ArrayList<>();
         list.get(1);
         userMapper.insert(new User("地"));
+    }
+
+    @Transactional
+    @Override
+    public void scan() {
+        try {
+            try (Cursor<User> scan = userMapper.scan()) {
+                scan.forEach(user -> {
+                    System.out.println(user);
+                });
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

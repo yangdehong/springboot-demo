@@ -1,112 +1,335 @@
-2020-12-21 15:27:28.882 - WARN - InetAddress.getLocalHost().getHostName() took 5006 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
-2020-12-21 15:27:33.889 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 66896 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
-2020-12-21 15:27:33.890 - INFO - The following profiles are active: dev
-2020-12-21 15:27:33.935 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@82c57b3
-2020-12-21 15:27:35.291 - INFO - Initializing ExecutorService 'threadPoolTaskScheduler'
-2020-12-21 15:27:36.024 - DEBUG - 8 mappings in 'requestMappingHandlerMapping'
-2020-12-21 15:27:36.123 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-12-21 15:27:36.178 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-12-21 15:27:36.727 - INFO - Started UserTests in 23.327 seconds (JVM running for 25.026)
-2020-12-21 15:27:37.538 - DEBUG - ==>  Preparing: SELECT * FROM user 
-2020-12-21 15:27:37.566 - DEBUG - ==> Parameters: 
-2020-12-21 15:27:37.598 - DEBUG - <==      Total: 13
-2020-12-21 15:27:37.608 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@82c57b3, started on Mon Dec 21 15:27:33 CST 2020
-2020-12-21 15:27:37.630 - INFO - Shutting down ExecutorService 'threadPoolTaskScheduler'
-2020-12-21 15:28:32.430 - WARN - InetAddress.getLocalHost().getHostName() took 5007 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
-2020-12-21 15:28:37.438 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 66941 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
-2020-12-21 15:28:37.438 - INFO - The following profiles are active: dev
-2020-12-21 15:28:37.473 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@31c269fd
-2020-12-21 15:28:38.954 - INFO - Initializing ExecutorService 'threadPoolTaskScheduler'
-2020-12-21 15:28:39.662 - DEBUG - 8 mappings in 'requestMappingHandlerMapping'
-2020-12-21 15:28:39.750 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-12-21 15:28:39.810 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-12-21 15:28:40.355 - INFO - Started UserTests in 23.688 seconds (JVM running for 25.407)
-2020-12-21 15:28:40.983 - DEBUG - ==>  Preparing: SELECT * FROM user 
-2020-12-21 15:28:41.019 - DEBUG - ==> Parameters: 
-2020-12-21 15:28:41.277 - DEBUG - <==      Total: 13
-2020-12-21 15:28:41.289 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@31c269fd, started on Mon Dec 21 15:28:37 CST 2020
-2020-12-21 15:28:41.309 - INFO - Shutting down ExecutorService 'threadPoolTaskScheduler'
-2020-12-21 15:29:14.099 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
-2020-12-21 15:29:19.106 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 66974 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
-2020-12-21 15:29:19.106 - INFO - The following profiles are active: dev
-2020-12-21 15:29:19.145 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@31c269fd
-2020-12-21 15:29:19.599 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep123.*.mapper]' package. Please check your configuration.
-2020-12-21 15:29:19.735 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
-2020-12-21 15:29:20.315 - INFO - Initializing ExecutorService 'threadPoolTaskScheduler'
-2020-12-21 15:29:20.387 - WARN - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ydh.redsheep.base.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-2020-12-21 15:29:20.387 - INFO - Shutting down ExecutorService 'threadPoolTaskScheduler'
-2020-12-21 15:29:20.397 - INFO - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-12-21 15:29:20.526 - ERROR - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'com.ydh.redsheep.base.mapper.UserMapper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'com.ydh.redsheep.base.mapper.UserMapper' in your configuration.
-
-2020-12-21 15:29:20.530 - ERROR - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5b67bb7e] to prepare test instance [com.ydh.redsheep.UserTests@2489e84a]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:220)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:53)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ydh.redsheep.base.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:337)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:125)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
-	... 24 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ydh.redsheep.base.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1695)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1253)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:537)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:513)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:653)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:224)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:334)
-	... 40 common frames omitted
+2020-12-22 11:24:27.098 - WARN - InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:24:32.105 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 84513 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:24:32.105 - INFO - The following profiles are active: dev
+2020-12-22 11:24:32.142 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@51c929ae
+2020-12-22 11:24:33.298 - INFO - Initializing ExecutorService 'threadPoolTaskScheduler'
+2020-12-22 11:24:33.970 - DEBUG - 8 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:24:34.076 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:24:34.138 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:24:34.797 - INFO - Started StreamTests in 23.351 seconds (JVM running for 24.856)
+2020-12-22 11:24:38.694 - DEBUG - ==>  Preparing: select * from user limit ? 
+2020-12-22 11:24:38.796 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@51c929ae, started on Tue Dec 22 11:24:32 CST 2020
+2020-12-22 11:24:38.825 - INFO - Shutting down ExecutorService 'threadPoolTaskScheduler'
+2020-12-22 11:25:31.785 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:25:36.791 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 84562 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:25:36.791 - INFO - The following profiles are active: dev
+2020-12-22 11:25:36.824 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@51c929ae
+2020-12-22 11:25:38.209 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:25:38.290 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:25:38.335 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:25:38.868 - INFO - Started StreamTests in 22.615 seconds (JVM running for 23.962)
+2020-12-22 11:25:39.422 - DEBUG - ==>  Preparing: select * from user limit ? 
+2020-12-22 11:25:39.503 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@51c929ae, started on Tue Dec 22 11:25:36 CST 2020
+2020-12-22 11:27:45.554 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:27:50.560 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 84653 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:27:50.561 - INFO - The following profiles are active: dev
+2020-12-22 11:27:50.592 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4fe01805
+2020-12-22 11:27:52.240 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:27:52.337 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:27:52.403 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:27:52.951 - INFO - Started StreamTests in 22.864 seconds (JVM running for 23.806)
+2020-12-22 11:27:53.272 - INFO - {dataSource-1} inited
+2020-12-22 11:27:53.595 - DEBUG - ==>  Preparing: select * from user limit ? 
+2020-12-22 11:27:53.622 - DEBUG - ==> Parameters: 10(Integer)
+2020-12-22 11:27:53.664 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@4fe01805, started on Tue Dec 22 11:27:50 CST 2020
+2020-12-22 11:27:53.671 - INFO - {dataSource-1} closing ...
+2020-12-22 11:27:53.689 - INFO - {dataSource-1} closed
+2020-12-22 11:28:55.592 - WARN - InetAddress.getLocalHost().getHostName() took 5002 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:29:00.601 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 84694 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:29:00.601 - INFO - The following profiles are active: dev
+2020-12-22 11:29:00.634 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@55120f99
+2020-12-22 11:29:02.051 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:29:02.143 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:29:02.191 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:29:02.705 - INFO - Started StreamTests in 22.611 seconds (JVM running for 23.891)
+2020-12-22 11:29:03.053 - INFO - {dataSource-1} inited
+2020-12-22 11:29:03.346 - DEBUG - ==>  Preparing: select * from user limit ? 
+2020-12-22 11:29:03.371 - DEBUG - ==> Parameters: 10(Integer)
+2020-12-22 11:29:03.408 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@55120f99, started on Tue Dec 22 11:29:00 CST 2020
+2020-12-22 11:29:03.413 - INFO - {dataSource-1} closing ...
+2020-12-22 11:29:03.430 - INFO - {dataSource-1} closed
+2020-12-22 11:29:32.206 - WARN - InetAddress.getLocalHost().getHostName() took 5000 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:29:37.213 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 84713 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:29:37.214 - INFO - The following profiles are active: dev
+2020-12-22 11:29:37.243 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5987e932
+2020-12-22 11:29:38.657 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:29:38.747 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:29:38.794 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:29:39.326 - INFO - Started UserTests in 22.632 seconds (JVM running for 23.719)
+2020-12-22 11:29:39.581 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5987e932, started on Tue Dec 22 11:29:37 CST 2020
+2020-12-22 11:29:39.589 - INFO - {dataSource-0} closing ...
+2020-12-22 11:30:24.369 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:30:29.376 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 84746 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:30:29.377 - INFO - The following profiles are active: dev
+2020-12-22 11:30:29.408 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5987e932
+2020-12-22 11:30:30.851 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:30:30.939 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:30:30.994 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:30:31.545 - INFO - Started UserTests in 22.685 seconds (JVM running for 23.733)
+2020-12-22 11:30:31.779 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5987e932, started on Tue Dec 22 11:30:29 CST 2020
+2020-12-22 11:30:31.787 - INFO - {dataSource-0} closing ...
+2020-12-22 11:32:06.480 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:32:11.487 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 84808 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:32:11.488 - INFO - The following profiles are active: dev
+2020-12-22 11:32:11.508 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@25230246
+2020-12-22 11:32:11.934 - WARN - Skipping MapperFactoryBean with name 'userMapper' and 'com.ydh.redsheep.base.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-12-22 11:32:11.935 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep.*.mapper]' package. Please check your configuration.
+2020-12-22 11:32:13.492 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:32:13.593 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:32:13.653 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:32:14.298 - INFO - Started UserTests in 23.395 seconds (JVM running for 24.554)
+2020-12-22 11:32:14.624 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@25230246, started on Tue Dec 22 11:32:11 CST 2020
+2020-12-22 11:32:14.629 - INFO - {dataSource-0} closing ...
+2020-12-22 11:40:04.542 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:40:09.550 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 85045 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:40:09.551 - INFO - The following profiles are active: dev
+2020-12-22 11:40:09.572 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@329a1243
+2020-12-22 11:40:10.056 - WARN - Skipping MapperFactoryBean with name 'userMapper' and 'com.ydh.redsheep.base.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2020-12-22 11:40:10.057 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep.*.mapper]' package. Please check your configuration.
+2020-12-22 11:40:11.291 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:40:11.382 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:40:11.437 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:40:12.070 - INFO - Started UserTests in 23.292 seconds (JVM running for 25.043)
+2020-12-22 11:40:12.378 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@329a1243, started on Tue Dec 22 11:40:09 CST 2020
+2020-12-22 11:40:12.385 - INFO - {dataSource-0} closing ...
+2020-12-22 11:41:37.064 - WARN - InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:41:42.073 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 85109 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:41:42.073 - INFO - The following profiles are active: dev
+2020-12-22 11:41:42.102 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b
+2020-12-22 11:41:42.570 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 11:41:43.629 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:41:43.716 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:41:43.768 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:41:44.312 - INFO - Started UserTests in 22.766 seconds (JVM running for 23.807)
+2020-12-22 11:41:44.650 - INFO - {dataSource-1} inited
+2020-12-22 11:41:44.973 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 11:41:45.000 - DEBUG - ==> Parameters: 
+2020-12-22 11:41:45.030 - DEBUG - <==      Total: 13
+2020-12-22 11:41:45.039 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b, started on Tue Dec 22 11:41:42 CST 2020
+2020-12-22 11:41:45.044 - INFO - {dataSource-1} closing ...
+2020-12-22 11:41:45.058 - INFO - {dataSource-1} closed
+2020-12-22 11:42:29.199 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:42:34.203 - INFO - Starting UserTests on MacBook-Pro-4.local with PID 85143 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:42:34.203 - INFO - The following profiles are active: dev
+2020-12-22 11:42:34.234 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b
+2020-12-22 11:42:34.775 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 11:42:35.910 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:42:36.000 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:42:36.057 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:42:36.631 - INFO - Started UserTests in 22.953 seconds (JVM running for 24.281)
+2020-12-22 11:42:37.032 - INFO - {dataSource-1} inited
+2020-12-22 11:42:37.347 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 11:42:37.377 - DEBUG - ==> Parameters: 
+2020-12-22 11:42:37.410 - DEBUG - <==      Total: 13
+2020-12-22 11:42:37.422 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b, started on Tue Dec 22 11:42:34 CST 2020
+2020-12-22 11:42:37.428 - INFO - {dataSource-1} closing ...
+2020-12-22 11:42:37.442 - INFO - {dataSource-1} closed
+2020-12-22 11:43:23.473 - WARN - InetAddress.getLocalHost().getHostName() took 5005 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:43:28.476 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 85174 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:43:28.476 - INFO - The following profiles are active: dev
+2020-12-22 11:43:28.508 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@26f3d90c
+2020-12-22 11:43:28.995 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 11:43:30.093 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:43:30.191 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:43:30.245 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:43:30.817 - INFO - Started StreamTests in 22.818 seconds (JVM running for 24.292)
+2020-12-22 11:43:31.149 - INFO - {dataSource-1} inited
+2020-12-22 11:43:31.405 - DEBUG - ==>  Preparing: select * from user limit ? 
+2020-12-22 11:43:31.432 - DEBUG - ==> Parameters: 10(Integer)
+2020-12-22 11:43:31.472 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@26f3d90c, started on Tue Dec 22 11:43:28 CST 2020
+2020-12-22 11:43:31.478 - INFO - {dataSource-1} closing ...
+2020-12-22 11:43:31.494 - INFO - {dataSource-1} closed
+2020-12-22 11:59:46.145 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 11:59:51.152 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 85700 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 11:59:51.153 - INFO - The following profiles are active: dev
+2020-12-22 11:59:51.185 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@420745d7
+2020-12-22 11:59:51.718 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 11:59:52.835 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 11:59:52.928 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 11:59:52.984 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 11:59:53.604 - INFO - Started StreamTests in 22.959 seconds (JVM running for 23.983)
+2020-12-22 11:59:54.030 - INFO - {dataSource-1} inited
+2020-12-22 11:59:54.317 - DEBUG - ==>  Preparing: select * from user 
+2020-12-22 11:59:54.346 - DEBUG - ==> Parameters: 
+2020-12-22 11:59:54.396 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@420745d7, started on Tue Dec 22 11:59:51 CST 2020
+2020-12-22 11:59:54.402 - INFO - {dataSource-1} closing ...
+2020-12-22 11:59:54.415 - INFO - {dataSource-1} closed
+2020-12-22 12:45:48.550 - WARN - InetAddress.getLocalHost().getHostName() took 5004 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 12:45:53.556 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 87009 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 12:45:53.557 - INFO - The following profiles are active: dev
+2020-12-22 12:45:53.612 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b
+2020-12-22 12:45:54.344 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 12:45:55.697 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 12:45:55.829 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 12:45:55.893 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 12:45:56.484 - INFO - Started StreamTests in 23.417 seconds (JVM running for 24.669)
+2020-12-22 12:45:56.928 - INFO - {dataSource-1} inited
+2020-12-22 12:45:57.348 - DEBUG - ==>  Preparing: select * from user 
+2020-12-22 12:45:57.382 - DEBUG - ==> Parameters: 
+2020-12-22 12:45:57.422 - DEBUG - <==      Total: 13
+2020-12-22 12:45:57.455 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b, started on Tue Dec 22 12:45:53 CST 2020
+2020-12-22 12:45:57.460 - INFO - {dataSource-1} closing ...
+2020-12-22 12:45:57.473 - INFO - {dataSource-1} closed
+2020-12-22 12:46:39.966 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 12:46:44.973 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 87040 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 12:46:44.973 - INFO - The following profiles are active: dev
+2020-12-22 12:46:45.005 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@32f61a31
+2020-12-22 12:46:45.487 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 12:46:46.610 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 12:46:46.693 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 12:46:46.740 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 12:46:47.253 - INFO - Started StreamTests in 22.736 seconds (JVM running for 23.771)
+2020-12-22 12:46:47.567 - INFO - {dataSource-1} inited
+2020-12-22 12:46:47.892 - DEBUG - ==>  Preparing: select * from user 
+2020-12-22 12:46:47.918 - DEBUG - ==> Parameters: 
+2020-12-22 12:46:47.953 - DEBUG - <==      Total: 13
+2020-12-22 12:46:47.982 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@32f61a31, started on Tue Dec 22 12:46:45 CST 2020
+2020-12-22 12:46:47.986 - INFO - {dataSource-1} closing ...
+2020-12-22 12:46:47.994 - INFO - {dataSource-1} closed
+2020-12-22 12:56:51.079 - WARN - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 12:56:56.083 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 87403 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 12:56:56.083 - INFO - The following profiles are active: dev
+2020-12-22 12:56:56.125 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b
+2020-12-22 12:56:56.680 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 12:56:57.844 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 12:56:57.933 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 12:56:57.995 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 12:56:58.538 - INFO - Started StreamTests in 22.994 seconds (JVM running for 24.2)
+2020-12-22 12:56:58.953 - INFO - {dataSource-1} inited
+2020-12-22 12:56:59.261 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.289 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.322 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.324 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.324 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.324 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.334 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.335 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.335 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.336 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.344 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.344 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.344 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.345 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.352 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.353 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.353 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.353 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.362 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.362 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.362 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.363 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.371 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.371 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.372 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.372 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.380 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.380 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.380 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.381 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.388 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.389 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.389 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.389 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.396 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.397 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.397 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.397 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.405 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.405 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.406 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user 
+2020-12-22 12:56:59.406 - DEBUG - ==> Parameters: 
+2020-12-22 12:56:59.413 - DEBUG - <==      Total: 13
+2020-12-22 12:56:59.414 - INFO - 一共[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null), User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null), User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null), User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null), User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:56:59.425 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b, started on Tue Dec 22 12:56:56 CST 2020
+2020-12-22 12:56:59.429 - INFO - {dataSource-1} closing ...
+2020-12-22 12:56:59.444 - INFO - {dataSource-1} closed
+2020-12-22 12:59:16.457 - WARN - InetAddress.getLocalHost().getHostName() took 5001 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+2020-12-22 12:59:21.463 - INFO - Starting StreamTests on MacBook-Pro-4.local with PID 87476 (started by yangdehong in /Users/yangdehong/IdeaProjects/springboot/base)
+2020-12-22 12:59:21.464 - INFO - The following profiles are active: dev
+2020-12-22 12:59:21.497 - DEBUG - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b
+2020-12-22 12:59:22.013 - WARN - No MyBatis mapper was found in '[com.ydh.redsheep]' package. Please check your configuration.
+2020-12-22 12:59:23.153 - DEBUG - 5 mappings in 'requestMappingHandlerMapping'
+2020-12-22 12:59:23.244 - DEBUG - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-12-22 12:59:23.295 - DEBUG - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-12-22 12:59:24.129 - INFO - Started StreamTests in 23.061 seconds (JVM running for 24.121)
+2020-12-22 12:59:24.500 - INFO - {dataSource-1} inited
+2020-12-22 12:59:24.897 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:24.927 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:24.964 - DEBUG - <==      Total: 1
+2020-12-22 12:59:24.968 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ? 
+2020-12-22 12:59:24.969 - DEBUG - ==> Parameters: 3(Integer)
+2020-12-22 12:59:24.987 - DEBUG - <==      Total: 3
+2020-12-22 12:59:24.988 - INFO - 一共Page{count=true, pageNum=0, pageSize=3, startRow=0, endRow=0, total=13, pages=5, reasonable=false, pageSizeZero=false}[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null)]页
+2020-12-22 12:59:24.989 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:24.989 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.002 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.002 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ? 
+2020-12-22 12:59:25.003 - DEBUG - ==> Parameters: 3(Integer)
+2020-12-22 12:59:25.018 - DEBUG - <==      Total: 3
+2020-12-22 12:59:25.018 - INFO - 一共Page{count=true, pageNum=1, pageSize=3, startRow=0, endRow=3, total=13, pages=5, reasonable=false, pageSizeZero=false}[User(id=1, username=名字3333, password=123, birthday=2019-12-12T00:00), User(id=2, username=tom, password=null, birthday=null), User(id=4, username=tom, password=null, birthday=null)]页
+2020-12-22 12:59:25.019 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.020 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.241 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.241 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.241 - DEBUG - ==> Parameters: 3(Integer), 3(Integer)
+2020-12-22 12:59:25.259 - DEBUG - <==      Total: 3
+2020-12-22 12:59:25.260 - INFO - 一共Page{count=true, pageNum=2, pageSize=3, startRow=3, endRow=6, total=13, pages=5, reasonable=false, pageSizeZero=false}[User(id=5, username=tom, password=null, birthday=null), User(id=7, username=名字, password=null, birthday=null), User(id=8, username=名字, password=null, birthday=null)]页
+2020-12-22 12:59:25.260 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.261 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.278 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.279 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.279 - DEBUG - ==> Parameters: 6(Integer), 3(Integer)
+2020-12-22 12:59:25.293 - DEBUG - <==      Total: 3
+2020-12-22 12:59:25.293 - INFO - 一共Page{count=true, pageNum=3, pageSize=3, startRow=6, endRow=9, total=13, pages=5, reasonable=false, pageSizeZero=false}[User(id=9, username=名字, password=null, birthday=null), User(id=11, username=名字, password=null, birthday=null), User(id=12, username=名字, password=null, birthday=null)]页
+2020-12-22 12:59:25.294 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.294 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.310 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.310 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.310 - DEBUG - ==> Parameters: 9(Integer), 3(Integer)
+2020-12-22 12:59:25.322 - DEBUG - <==      Total: 3
+2020-12-22 12:59:25.323 - INFO - 一共Page{count=true, pageNum=4, pageSize=3, startRow=9, endRow=12, total=13, pages=5, reasonable=false, pageSizeZero=false}[User(id=13, username=名字, password=null, birthday=null), User(id=14, username=名字, password=null, birthday=null), User(id=15, username=名字, password=null, birthday=null)]页
+2020-12-22 12:59:25.323 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.323 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.338 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.339 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.339 - DEBUG - ==> Parameters: 12(Integer), 3(Integer)
+2020-12-22 12:59:25.355 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.356 - INFO - 一共Page{count=true, pageNum=5, pageSize=3, startRow=12, endRow=15, total=13, pages=5, reasonable=false, pageSizeZero=false}[User(id=16, username=名字, password=null, birthday=null)]页
+2020-12-22 12:59:25.356 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.357 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.370 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.371 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.371 - DEBUG - ==> Parameters: 15(Integer), 3(Integer)
+2020-12-22 12:59:25.385 - DEBUG - <==      Total: 0
+2020-12-22 12:59:25.385 - INFO - 一共Page{count=true, pageNum=6, pageSize=3, startRow=15, endRow=18, total=13, pages=5, reasonable=false, pageSizeZero=false}[]页
+2020-12-22 12:59:25.386 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.386 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.402 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.403 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.403 - DEBUG - ==> Parameters: 18(Integer), 3(Integer)
+2020-12-22 12:59:25.417 - DEBUG - <==      Total: 0
+2020-12-22 12:59:25.418 - INFO - 一共Page{count=true, pageNum=7, pageSize=3, startRow=18, endRow=21, total=13, pages=5, reasonable=false, pageSizeZero=false}[]页
+2020-12-22 12:59:25.419 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.419 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.434 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.435 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.435 - DEBUG - ==> Parameters: 21(Integer), 3(Integer)
+2020-12-22 12:59:25.448 - DEBUG - <==      Total: 0
+2020-12-22 12:59:25.449 - INFO - 一共Page{count=true, pageNum=8, pageSize=3, startRow=21, endRow=24, total=13, pages=5, reasonable=false, pageSizeZero=false}[]页
+2020-12-22 12:59:25.450 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.450 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.461 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.462 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.462 - DEBUG - ==> Parameters: 24(Integer), 3(Integer)
+2020-12-22 12:59:25.472 - DEBUG - <==      Total: 0
+2020-12-22 12:59:25.472 - INFO - 一共Page{count=true, pageNum=9, pageSize=3, startRow=24, endRow=27, total=13, pages=5, reasonable=false, pageSizeZero=false}[]页
+2020-12-22 12:59:25.473 - DEBUG - ==>  Preparing: SELECT count(0) FROM user 
+2020-12-22 12:59:25.473 - DEBUG - ==> Parameters: 
+2020-12-22 12:59:25.483 - DEBUG - <==      Total: 1
+2020-12-22 12:59:25.483 - DEBUG - ==>  Preparing: SELECT id,username,password,birthday FROM user LIMIT ?, ? 
+2020-12-22 12:59:25.484 - DEBUG - ==> Parameters: 27(Integer), 3(Integer)
+2020-12-22 12:59:25.494 - DEBUG - <==      Total: 0
+2020-12-22 12:59:25.494 - INFO - 一共Page{count=true, pageNum=10, pageSize=3, startRow=27, endRow=30, total=13, pages=5, reasonable=false, pageSizeZero=false}[]页
+2020-12-22 12:59:25.503 - DEBUG - Closing org.springframework.web.context.support.GenericWebApplicationContext@5bbbdd4b, started on Tue Dec 22 12:59:21 CST 2020
+2020-12-22 12:59:25.507 - INFO - {dataSource-1} closing ...
+2020-12-22 12:59:25.518 - INFO - {dataSource-1} closed
