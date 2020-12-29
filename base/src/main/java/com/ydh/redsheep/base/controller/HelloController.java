@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: yangdehong
  * @version: 2017/9/13.
  */
-@RestController
+@RestController //相当于配置 @Responsebody+@Controller
 @RequestMapping("hello")
 public class HelloController {
 

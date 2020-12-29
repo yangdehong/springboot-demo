@@ -1,5 +1,6 @@
-package com.ydh.redsheep.base.pojo;
+package com.ydh.redsheep.base.pojo.yml;
 
+import com.ydh.redsheep.base.pojo.Pet;
 import lombok.Data;
 import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
