@@ -26,4 +26,5 @@ logs/**
 
 #### logging
 log.path_IS_UNDEFINED
+**.log
 

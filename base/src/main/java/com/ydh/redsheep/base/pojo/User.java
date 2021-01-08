@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -17,6 +18,7 @@ import java.util.Date;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Table
 public class User {
 
     private Integer id;

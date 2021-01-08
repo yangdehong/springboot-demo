@@ -33,34 +33,28 @@ mybatis:
   type-aliases-package: com.ydh.redsheep.base.pojo # 转名字
 
 #日志
-#logging:
-#  config: classpath:logback-spring.xml
-#  #logging.path和logging.file这2个属性，只需要配置其中之一即可，如果同时配置，则使用logging.file属性。
-#  #  path: F:/logs/springboot/deeplevel/
-#  file: logs/springboot/deeplevel/deeplevel.log
-##  level.*: debug
-
 logging:
-  file: logs/ydh/${spring.application.name}/${spring.application.name}.log
-  level:
-    com:
-      alibaba:
-        druid: debug
-      jure:
-        fore:
-          dao: debug
-    org:
-      springboot:
-        sample: debug
-      springframework:
-        web: debug
-  pattern:
-    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n)'
-    dateformat: yyyy-MM-dd HH:mm:ss.SSS
-    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n'
-sys:
-  logging:
-    path: F:/logs/jure/${spring.application.name}/${spring.application.name}.log
+  # logback.xml的加载早于application.properties，所以如果在logback.xml中使用了变量，而恰好这个变量是写在application.properties时，
+  # 那么就会获取不到，只要改成logback-spring.xml就可以解决。
+  config: classpath:logback-spring.xml
+#logging:
+#  file: logs/ydh/${spring.application.name}/${spring.application.name}.log
+#  level:
+#    com:
+#      alibaba:
+#        druid: debug
+#      jure:
+#        fore:
+#          dao: debug
+#    org:
+#      springboot:
+#        sample: debug
+#      springframework:
+#        web: debug
+#  pattern:
+#    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n)'
+#    dateformat: yyyy-MM-dd HH:mm:ss.SSS
+#    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n'
 
 #############自定义配置##################################
 #自定义参数配置

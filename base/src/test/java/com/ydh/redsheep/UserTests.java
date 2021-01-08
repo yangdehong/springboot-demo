@@ -20,7 +20,7 @@ public class UserTests {
 
     @Test
     public void list(){
-        System.out.println("============"+userService.list());
+        log.debug("============"+userService.list());
     }
 
     @Test
