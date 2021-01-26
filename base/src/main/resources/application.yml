@@ -33,10 +33,10 @@ mybatis:
   type-aliases-package: com.ydh.redsheep.base.pojo # 转名字
 
 #日志
-logging:
-  # logback.xml的加载早于application.properties，所以如果在logback.xml中使用了变量，而恰好这个变量是写在application.properties时，
-  # 那么就会获取不到，只要改成logback-spring.xml就可以解决。
-  config: classpath:logback-spring.xml
+#logging:
+#  # logback.xml的加载早于application.properties，所以如果在logback.xml中使用了变量，而恰好这个变量是写在application.properties时，
+#  # 那么就会获取不到，只要改成logback-spring.xml就可以解决。
+#  config: classpath:logback-spring.xml
 #logging:
 #  file: logs/ydh/${spring.application.name}/${spring.application.name}.log
 #  level:
