@@ -16,7 +16,7 @@ public class MongoConfiguration extends AbstractMongoConfiguration {
     private String primaryHost = "172.16.131.10";
     private String secondaryHost = "172.16.131.10";
     private Integer port = 27017;
-    private String dbName = "ydh";
+    private String dbName = "test";
     private String username = "ydh";
     private String password = "123456";
     private int nodeType = 0;

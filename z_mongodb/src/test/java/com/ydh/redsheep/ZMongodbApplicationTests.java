@@ -27,14 +27,16 @@ public class ZMongodbApplicationTests {
 	}
 	@Test
 	public void test2() {
-		Resume resume  = new Resume();
-		resume.setName("chengdaotest");
-		resume.setExpectSalary(1);
-		resume.setCity("bj");
-		resumeRepository.save(resume);
+		for (int i=0; i<100; i++) {
+			Resume resume  = new Resume();
+			resume.setName("ydh"+i);
+			resume.setExpectSalary(100*i);
+			resume.setCity("bj"+i);
+			resumeRepository.save(resume);
+		}
 		System.out.println(resumeRepository.findAll());
-		System.out.println(resumeRepository.findByNameEquals("zhangsan"));
-		System.out.println(resumeRepository.findByNameAndExpectSalary("zhangsan",25000));
+//			System.out.println(resumeRepository.findByNameEquals("zhangsan"));
+//			System.out.println(resumeRepository.findByNameAndExpectSalary("zhangsan",25000));
 	}
 
 }

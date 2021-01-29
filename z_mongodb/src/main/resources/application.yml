@@ -3,3 +3,11 @@ server:
   port: 8999
   servlet:
     context-path: /
+#spring:
+#  data:
+#    mongodb:
+#      host: 172.16.131.10
+#      port: 27017
+#      database: test
+#      username: ydh
+#      password: 123456
