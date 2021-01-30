@@ -4,14 +4,10 @@ server:
   servlet:
     context-path: /
 spring:
-  data:
-    redis:
-      repositories:
-        enabled: true
   redis:
-    host: r-bp1594add6596dd4pd.redis.rds.aliyuncs.com
+    host: 172.16.131.10
     port: 6379
-    password: '!Yiwise0915='
+    password: 123456
     database: 0
     # 连接超时时间（毫秒）
     timeout:
@@ -30,5 +26,3 @@ spring:
 #    sentinel:
 #      master: mymaster
 #      nodes: 192.168.2.188:26379,192.168.2.188:26380,192.168.2.188:26381
-  session:
-    store-type: redis

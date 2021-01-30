@@ -18,14 +18,8 @@ public class ZRedisApplicationTests {
 	@Test
 	public void contextLoads() {
 
-		redisTemplate.opsForZSet().add("test_key", "value", 1111);
-		redisTemplate.opsForZSet().add("test_key", "value1", 2222);
-		redisTemplate.opsForZSet().add("test_key", "value2", 3333);
-		redisTemplate.opsForZSet().add("test_key", "value3", 4444);
-		redisTemplate.opsForZSet().add("test_key", "value4", 4444);
-
-		redisTemplate.opsForZSet().remove("test_key", "value");
-		redisTemplate.opsForZSet().remove("test_key", "value3");
+		redisTemplate.opsForValue().set("key", "value");
+		redisTemplate.opsForHash().put("k1", "k2", "value");
 
 	}
 
