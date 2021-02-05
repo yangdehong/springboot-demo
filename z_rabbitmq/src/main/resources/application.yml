@@ -9,8 +9,9 @@ dest:
 
 spring:
   rabbitmq:
-    host: 172.16.10.40
-    username: admin
+    host: 172.16.131.16
+    username: root
     password: 123456
     port: 5672
+    virtual-host: /
 
