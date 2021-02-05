@@ -18,6 +18,8 @@ public class ClusterTest {
         jedisClusterNode.add(new HostAndPort("172.16.131.10", 7004));
         jedisClusterNode.add(new HostAndPort("172.16.131.10", 7005));
         jedisClusterNode.add(new HostAndPort("172.16.131.10", 7006));
+        jedisClusterNode.add(new HostAndPort("172.16.131.10", 7007));
+        jedisClusterNode.add(new HostAndPort("172.16.131.10", 7008));
         JedisCluster jcd = new JedisCluster(jedisClusterNode, config);
         jcd.set("name:099","testkey");
         String value = jcd.get("name:099");
