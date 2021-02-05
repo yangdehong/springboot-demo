@@ -14,4 +14,10 @@ spring:
     password: 123456
     port: 5672
     virtual-host: /
-
+    listener:
+      type: simple
+      simple:
+        max-concurrency: 10
+        concurrency: 5
+        prefetch: 10
+        acknowledge-mode: manual
