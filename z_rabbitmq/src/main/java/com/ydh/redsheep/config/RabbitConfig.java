@@ -13,6 +13,49 @@ import java.util.Map;
 @EnableRabbit
 @Configuration
 public class RabbitConfig {
+    /************************** pai支付例子 ***************************/
+    @Bean
+    public Queue queuePayDlx() {
+        Queue queue = new Queue("queue.dlx.pay", true, false, false, null);
+        return queue;
+    }
+    /**
+     * 死信交换器 * @return
+     */
+    @Bean
+    public Exchange exchangePayDlx() {
+        DirectExchange exchange = new DirectExchange("ex.dlx.pay", true, false, null);
+        return exchange;
+    }
+    /**
+     * 死信交换器绑定死信队列 * @return
+     */
+    @Bean
+    public Binding bindingPayDlx() {
+        return BindingBuilder.bind(queuePayDlx()).to(exchangePayDlx()).with("key.dlx.pay").noargs();
+    }
+
+    @Bean
+    public Queue queuePayBiz() {
+        Map<String, Object> props = new HashMap<>();
+        // 消息的生存时间 10s
+        props.put("x-message-ttl", 1*60*1000);
+        // 设置该队列所关联的死信交换器(当队列消息TTL到期后依然没有消费，则加入死信队列)
+        props.put("x-dead-letter-exchange", "ex.dlx.pay");
+        // 设置该队列所关联的死信交换器的routingKey，如果没有特殊指定，使用原队列的routingKey
+        props.put("x-dead-letter-routing-key", "key.dlx.pay");
+        Queue queue = new Queue("queue.pay", true, false, false, props);
+        return queue;
+    }
+    @Bean
+    public Exchange exchangePayBiz() {
+        DirectExchange exchange = new DirectExchange("ex.pay", true, false, null);
+        return exchange;
+    }
+    @Bean
+    public Binding bindingPayBiz() {
+        return BindingBuilder.bind(queuePayBiz()).to(exchangePayBiz()).with("key.pay").noargs();
+    }
 
     /************************** dlx ***************************/
     @Bean
