@@ -14,56 +14,51 @@ import java.util.Map;
 @Configuration
 public class RabbitConfig {
 
-//    @Bean
-//    public Queue queue() {
-//        Map<String, Object> props = new HashMap<>();
-//        // 消息的生存时间 10s
-//        props.put("x-message-ttl", 10000);
-//        // 设置该队列所关联的死信交换器(当队列消息TTL到期后依然没有消费，则加入死信队列)
-//        props.put("x-dead-letter-exchange", "ex.go.dlx");
-//        // 设置该队列所关联的死信交换器的routingKey，如果没有特殊指定，使用原 队列的routingKey
-//        props.put("x-dead-letter-routing-key", "go.dlx");
-//        Queue queue = new Queue("q.go", true, false, false, props);
-//        return queue;
-//    }
-//
-//    @Bean
-//    public Queue queueDlx() {
-//        Queue queue = new Queue("q.go.dlx", true, false, false);
-//        return queue;
-//    }
-//
-//    @Bean
-//    public Exchange exchange() {
-//        DirectExchange exchange = new DirectExchange("ex.go", true,
-//                false, null);
-//        return exchange;
-//    }
-//
-//    /**
-//     * 死信交换器 * @return
-//     */
-//    @Bean
-//    public Exchange exchangeDlx() {
-//        DirectExchange exchange = new DirectExchange("ex.go.dlx",
-//                true, false, null);
-//        return exchange;
-//    }
-//
-//    @Bean
-//    public Binding binding() {
-//        return
-//                BindingBuilder.bind(queue()).to(exchange()).with("go").noargs();
-//    }
-//
-//    /**
-//     * 死信交换器绑定死信队列 * @return
-//     */
-//    @Bean
-//    public Binding bindingDlx() {
-//        return
-//                BindingBuilder.bind(queueDlx()).to(exchangeDlx()).with("go.dlx").noargs();
-//    }
+    /************************** dlx ***************************/
+    @Bean
+    public Queue queueDlx() {
+        Queue queue = new Queue("queue.dlx", true, false, false, null);
+        return queue;
+    }
+    /**
+     * 死信交换器 * @return
+     */
+    @Bean
+    public Exchange exchangeDlx() {
+        DirectExchange exchange = new DirectExchange("ex.dlx", true, false, null);
+        return exchange;
+    }
+    /**
+     * 死信交换器绑定死信队列 * @return
+     */
+    @Bean
+    public Binding bindingDlx() {
+        return BindingBuilder.bind(queueDlx()).to(exchangeDlx()).with("key.dlx").noargs();
+    }
+
+    @Bean
+    public Queue queueBiz() {
+        Map<String, Object> props = new HashMap<>();
+        // 消息的生存时间 10s
+        props.put("x-message-ttl", 10000);
+        // 设置该队列所关联的死信交换器(当队列消息TTL到期后依然没有消费，则加入死信队列)
+        props.put("x-dead-letter-exchange", "ex.dlx");
+        // 设置该队列所关联的死信交换器的routingKey，如果没有特殊指定，使用原队列的routingKey
+        props.put("x-dead-letter-routing-key", "key.dlx");
+        Queue queue = new Queue("queue.biz", true, false, false, props);
+        return queue;
+    }
+    @Bean
+    public Exchange exchangeBiz() {
+        DirectExchange exchange = new DirectExchange("ex.biz", true, false, null);
+        return exchange;
+    }
+    @Bean
+    public Binding bindingBiz() {
+        return BindingBuilder.bind(queueBiz()).to(exchangeBiz()).with("key.biz").noargs();
+    }
+
+
 
     /************************** ttl ***************************/
     @Bean
@@ -76,19 +71,21 @@ public class RabbitConfig {
         Queue queue = new Queue("queue.ttl", false, false, false, props);
         return queue;
     }
+    @Bean
+    public Exchange exchangeTTL() {
+        DirectExchange exchange = new DirectExchange("ex.ttl", false, false);
+        return exchange;
+    }
+    @Bean
+    public Binding bindingTTL() {
+        return BindingBuilder.bind(queueTTL()).to(exchangeTTL()).with("key.ttl").noargs();
+    }
 
     @Bean
     public Queue queueWaiting() {
         Queue queue = new Queue("queue.ttl-waiting", false, false, false, null);
         return queue;
     }
-
-    @Bean
-    public Exchange exchangeTTL() {
-        DirectExchange exchange = new DirectExchange("ex.ttl", false, false);
-        return exchange;
-    }
-
     /**
      * 该交换器使用的时候，需要给每个消息设置有效期 * @return
      */
@@ -97,18 +94,12 @@ public class RabbitConfig {
         DirectExchange exchange = new DirectExchange("ex.ttl-waiting", false, false);
         return exchange;
     }
-
-    @Bean
-    public Binding bindingTTLWaiting() {
-        return BindingBuilder.bind(queueTTL()).to(exchangeTTL()).with("key.ttl").noargs();
-    }
-
     @Bean
     public Binding bindingWaiting() {
         return BindingBuilder.bind(queueWaiting()).to(exchangeWaiting()).with("key.ttl-waiting").noargs();
     }
 
-/************************** message ***************************/
+    /************************** message ***************************/
 
 
     @Bean
