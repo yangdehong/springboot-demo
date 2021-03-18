@@ -1,14 +1,12 @@
 #############系统配置##################################
 spring:
   application:
-    name: base
-  profiles:
-    active: dev #设置配置文件
+    name: spring-batch
   datasource:
     # 驱动配置信息
     name: mydb
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.16.131.21:3306/test
+    url: jdbc:mysql://172.16.131.21:3306/ydh
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -55,15 +53,3 @@ mybatis:
 #    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n)'
 #    dateformat: yyyy-MM-dd HH:mm:ss.SSS
 #    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n'
-
-#############自定义配置##################################
-#自定义参数配置
-person:
-  height: 171cm
-  weight: 62kg
-  name: ydh
-  content: "height: ${person.height}; weight: ${person.weight}; name: ${person.name}"
-  hobby: [ 吃饭,睡觉,打豆豆 ]
-  family: [ father,mother ]
-  map: { k1: v1,k2: v2 }
-  pet: { type: dog,name: 旺财 }
