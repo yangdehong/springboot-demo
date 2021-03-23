@@ -38,13 +38,13 @@ public class MyRocketProducerTest {
 
     @Test
     public void testTxSendMessages() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             // 用于向broker发送消息
             // 第一个参数是topic名称
             // 第二个参数是消息内容
             this.rocketMQTemplate.sendMessageInTransaction(
                     "txGroup",
-                    "sb-01",
+                    "tx-01",
                     MessageBuilder.withPayload("springboot: hello ydh" + i).build(),
                     ""
             );

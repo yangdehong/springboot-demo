@@ -29,7 +29,7 @@ public class TxRocketListener implements RocketMQLocalTransactionListener {
     public RocketMQLocalTransactionState executeLocalTransaction(Message message, Object o) {
         String txId = (String) message.getHeaders().get(RocketMQHeaders.TRANSACTION_ID);
         try {
-            log.debug("执行业务");
+            log.info("执行业务");
             Thread.sleep(1000);
             STAMP_MAP.put(txId, RocketMQLocalTransactionState.COMMIT);
             return RocketMQLocalTransactionState.COMMIT;
@@ -48,7 +48,7 @@ public class TxRocketListener implements RocketMQLocalTransactionListener {
     @Override
     public RocketMQLocalTransactionState checkLocalTransaction(Message message) {
         String txId = (String) message.getHeaders().get(RocketMQHeaders.TRANSACTION_ID);
-        log.debug("回查消息->txId={}，state={}", txId, STAMP_MAP.get(txId));
+        log.info("回查消息->txId={}，state={}", txId, STAMP_MAP.get(txId));
         return STAMP_MAP.get(txId);
     }
 }
