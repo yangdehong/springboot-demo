@@ -3,15 +3,13 @@ package com.ydh.redsheep.zrocketmq.controller;
 import com.ydh.redsheep.zrocketmq.ws.HelloMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.Mapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WebSocketController {
-
-    @MessageMapping("/")
-    public String index() {
-        return "index";
-    }
 
     //@MessageMapping是消息转发器，对应配置文件的setApplicationDestinationPrefixes
     //                 /app，客户端可以往"/app/hello"发送消息，该注解就会接受消息，交给greeting（）方法处理
