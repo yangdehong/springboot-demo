@@ -1,4 +1,4 @@
-package com.ydh.redsheep.base.filter;
+package com.ydh.redsheep.base.common.filter;
 
 import javax.servlet.*;
 import java.io.IOException;

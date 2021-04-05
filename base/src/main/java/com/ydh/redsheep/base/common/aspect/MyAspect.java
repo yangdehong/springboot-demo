@@ -1,4 +1,4 @@
-//package com.ydh.redsheep.base.aspect;
+//package com.ydh.redsheep.base.common.aspect;
 //
 //import org.aspectj.lang.ProceedingJoinPoint;
 //import org.aspectj.lang.annotation.*;

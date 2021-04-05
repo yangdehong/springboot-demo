@@ -1,4 +1,4 @@
-package com.ydh.redsheep.base.interceptor;
+package com.ydh.redsheep.base.common.interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

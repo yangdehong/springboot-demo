@@ -1,4 +1,4 @@
-package com.ydh.redsheep.base.util.exception;
+package com.ydh.redsheep.base.common.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

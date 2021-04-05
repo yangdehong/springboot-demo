@@ -1,4 +1,4 @@
-package com.ydh.redsheep.base.filter;
+package com.ydh.redsheep.base.common.filter;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +21,7 @@ public class MyFilterDetail {
         MyFilter myFilter = new MyFilter();
         registrationBean.setFilter(myFilter);
         List<String> urlPatterns = new ArrayList<>();
-        urlPatterns.add("/test/test");
+        urlPatterns.add("/say/hello");
         registrationBean.setUrlPatterns(urlPatterns);
         return registrationBean;
     }

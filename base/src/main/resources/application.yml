@@ -8,7 +8,7 @@ spring:
     # 驱动配置信息
     name: mydb
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.16.131.21:3306/test
+    url: jdbc:mysql://172.16.131.21:3306/ydh
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -26,35 +26,29 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     filters: stat,wall,log4j
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-mybatis:
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case=true: true # 返回结果驼峰
+#  mapper-locations: mapper/*.xml            # xml文件
+#  type-aliases-package: com.ydh.redsheep.base.pojo # 转名字
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.ydh.redsheep.base.pojo
   configuration:
-    map-underscore-to-camel-case=true: true # 返回结果驼峰
-  mapper-locations: mapper/*.xml            # xml文件
-  type-aliases-package: com.ydh.redsheep.base.pojo # 转名字
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto    # 主键自增策略
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+#      table-prefix: "" # 前缀
+
 
 #日志
-#logging:
-#  # logback.xml的加载早于application.properties，所以如果在logback.xml中使用了变量，而恰好这个变量是写在application.properties时，
-#  # 那么就会获取不到，只要改成logback-spring.xml就可以解决。
-#  config: classpath:logback-spring.xml
-#logging:
-#  file: logs/ydh/${spring.application.name}/${spring.application.name}.log
-#  level:
-#    com:
-#      alibaba:
-#        druid: debug
-#      jure:
-#        fore:
-#          dao: debug
-#    org:
-#      springboot:
-#        sample: debug
-#      springframework:
-#        web: debug
-#  pattern:
-#    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n)'
-#    dateformat: yyyy-MM-dd HH:mm:ss.SSS
-#    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} - %level - %msg%n'
+logging:
+  # logback.xml的加载早于application.properties，所以如果在logback.xml中使用了变量，而恰好这个变量是写在application.properties时，
+  # 那么就会获取不到，只要改成logback-spring.xml就可以解决。
+  config: classpath:log4j2.xml
 
 #############自定义配置##################################
 #自定义参数配置
