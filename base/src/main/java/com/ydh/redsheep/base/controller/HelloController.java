@@ -15,6 +15,7 @@ public class HelloController {
 
     @GetMapping("say")
     public String say(){
+        int a = 1/0;
         return "Hello Spring Boot!";
     }
 

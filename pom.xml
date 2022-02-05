@@ -6,7 +6,6 @@
 	<groupId>com.ydh.redsheep</groupId>
 	<artifactId>springboot-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!--	<packaging>pom</packaging>-->
 
 	<name>springboot-demo</name>
 	<description>Demo project for Spring Boot</description>
@@ -17,20 +16,6 @@
 		<version>2.1.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
-<!--	<modules>-->
-<!--		<module>base</module>-->
-<!--		<module>deeplevel</module>-->
-<!--		<module>filter</module>-->
-<!--		<module>logging</module>-->
-<!--		<module>scheduled</module>-->
-<!--		<module>z_activemq</module>-->
-<!--		<module>z_mongodb</module>-->
-<!--		<module>z_rabbitmq</module>-->
-<!--		<module>z_redis</module>-->
-<!--		<module>z_websocket</module>-->
-<!--		<module>z_zookeeper</module>-->
-<!--	</modules>-->
 
 	<build>
 		<plugins>

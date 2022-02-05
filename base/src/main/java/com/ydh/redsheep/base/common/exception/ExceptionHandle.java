@@ -1,5 +1,6 @@
 package com.ydh.redsheep.base.common.exception;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -9,13 +10,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author: yangdehong
  * @version: 2017/7/19.
  */
+@Slf4j
 @ControllerAdvice
 public class ExceptionHandle {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public String exceptionHandle(Exception e){
-        System.out.println(e.getMessage());
+        log.error("{}", "错误信息", e);
         return e.getMessage();
     }
 

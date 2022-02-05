@@ -4,7 +4,7 @@
 -->
 <Configuration status="WARN" monitorInterval="30">
     <Properties>
-        <Property name="App">base</Property>
+        <Property name="App">database</Property>
         <Property name="logDir">../logs</Property>
         <property name="logCharset">UTF-8</property>
         <Property name="splitSize">30 MB</Property>
