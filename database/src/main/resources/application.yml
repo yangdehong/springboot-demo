@@ -3,6 +3,18 @@ server:
   servlet:
     context-path: / #项目名称
 spring:
+  druid:
+    datasource:
+      master:
+        password: 123456
+        username: root
+        jdbc-url: jdbc:mysql://172.16.131.32:3306/ydh
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      slave:
+        password: 123456
+        username: root
+        jdbc-url: jdbc:mysql://172.16.131.32:3306/ydh2
+        driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: database
   datasource:
@@ -43,6 +55,8 @@ mybatis-plus:
 #      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
 #      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
 #      table-prefix: "" # 前缀
+
+
 
 
 #日志
