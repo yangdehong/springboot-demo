@@ -31,17 +31,15 @@ public class UserController {
 
     @RoutingWith("masterDataSource")
     @GetMapping("/findAllM")
-    public String findAllProductM() {
+    public List<User> findAllProductM() {
         List<User> all = userMapper.findAll();
-        System.out.println(all);
-        return "ydh";
+        return all;
     }
     @RoutingWith("slaveDataSource")
     @GetMapping("/findAllS")
-    public String findAllProductS() {
+    public List<User> findAllProductS() {
         List<User> all = userMapper.findAll();
-        System.out.println(all);
-        return "ydh2";
+        return all;
     }
 
 }

@@ -26,7 +26,7 @@ public class MyDataSourceConfiguration {
      * Master data source.
      */
     @Bean("masterDataSource")
-    @ConfigurationProperties(prefix = "spring.druid.datasource.master")
+    @ConfigurationProperties(prefix = "spring.datasource.druid.master")
     DataSource masterDataSource() {
         log.info("create master datasource...");
         return DataSourceBuilder.create().build();
@@ -35,7 +35,7 @@ public class MyDataSourceConfiguration {
      * Slave data source.
      */
     @Bean("slaveDataSource")
-    @ConfigurationProperties(prefix = "spring.druid.datasource.slave")
+    @ConfigurationProperties(prefix = "spring.datasource.druid.slave")
     DataSource slaveDataSource() {
         log.info("create slave datasource...");
         return DataSourceBuilder.create().build();

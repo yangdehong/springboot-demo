@@ -3,27 +3,26 @@ server:
   servlet:
     context-path: / #项目名称
 spring:
-  druid:
-    datasource:
-      master:
-        password: 123456
-        username: root
-        jdbc-url: jdbc:mysql://172.16.131.32:3306/ydh
-        driver-class-name: com.mysql.cj.jdbc.Driver
-      slave:
-        password: 123456
-        username: root
-        jdbc-url: jdbc:mysql://172.16.131.32:3306/ydh2
-        driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: database
   datasource:
     # 驱动配置信息
     name: mydb
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.16.131.32:3306/ydh
-    username: root
-    password: 123456
+    druid:
+      master:
+        password: 123456
+        username: root
+        jdbc-url: jdbc:mysql://172.16.98.130:3306/ydh
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      slave:
+        password: 123456
+        username: root
+        jdbc-url: jdbc:mysql://172.16.98.130:3306/ydh2
+        driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://172.16.131.32:3306/ydh
+#    username: root
+#    password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
     #连接池的配置信息
     validationQuery: select 'x'
