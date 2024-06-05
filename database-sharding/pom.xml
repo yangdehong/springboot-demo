@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.13</version>
+        <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ydh.redsheep</groupId>
-    <artifactId>database</artifactId>
+    <artifactId>database-sharding</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>database</name>
-    <description>database</description>
+    <name>database-sharding</name>
+    <description>database-sharding</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,11 +20,10 @@
 
     <dependencies>
 
-        <!-- lombok -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>4.1.0</version>
         </dependency>
 
         <!-- 日志log4j2 -->
@@ -46,6 +45,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <!--<version>5.1.38</version>-->
         </dependency>
         <!-- mybatis-plus-->
         <dependency>
@@ -63,6 +63,13 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.17</version>
+        </dependency>
+
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
         </dependency>
 
         <dependency>
