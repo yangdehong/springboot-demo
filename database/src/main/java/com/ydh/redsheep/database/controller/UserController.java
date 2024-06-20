@@ -4,6 +4,7 @@ import com.ydh.redsheep.database.common.aop.RoutingWith;
 import com.ydh.redsheep.database.common.config.RoutingDataSourceContext;
 import com.ydh.redsheep.database.mapper.UserMapper;
 import com.ydh.redsheep.database.pojo.User;
+import com.ydh.redsheep.database.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,11 +23,18 @@ public class UserController {
 
     @Resource
     private UserMapper userMapper;
+    @Resource
+    private UserService userService;
 
     @GetMapping("get")
     public User get(){
         User user = userMapper.selectById(2L);
         return user;
+    }
+
+    @GetMapping("tx")
+    public void tx(){
+        userService.tx();
     }
 
     @RoutingWith("masterDataSource")

@@ -43,6 +43,6 @@ public class User {
 
     @TableField(fill = FieldFill.INSERT)
     @TableLogic
-    private Integer deleted;
+    private Integer isDeleted;
 
 }

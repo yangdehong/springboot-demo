@@ -1,5 +1,6 @@
 package com.ydh.redsheep.database.common.config;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -29,7 +30,7 @@ public class MyDataSourceConfiguration {
     @ConfigurationProperties(prefix = "spring.datasource.druid.master")
     DataSource masterDataSource() {
         log.info("create master datasource...");
-        return DataSourceBuilder.create().build();
+        return DataSourceBuilder.create().type(DruidDataSource.class).build();
     }
     /**
      * Slave data source.
@@ -38,7 +39,7 @@ public class MyDataSourceConfiguration {
     @ConfigurationProperties(prefix = "spring.datasource.druid.slave")
     DataSource slaveDataSource() {
         log.info("create slave datasource...");
-        return DataSourceBuilder.create().build();
+        return DataSourceBuilder.create().type(DruidDataSource.class).build();
     }
 
     @Bean

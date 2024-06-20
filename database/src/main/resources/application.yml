@@ -9,35 +9,70 @@ spring:
     # 驱动配置信息
     name: mydb
     druid:
+      stat-view-servlet:
+        enabled: true
+        url: /druid
+        login-username: admin
+        login-password: admin
       master:
-        password: 123456
-        username: root
-        jdbc-url: jdbc:mysql://172.16.98.130:3306/ydh
         driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.16.98.135:3306/ydh
+        username: root
+        password: 123456
+        type: com.alibaba.druid.pool.DruidDataSource
+        validationQuery: select '1'
+        initialSize: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+#        filters: stat,wall
+        filters: stat,wall,log4j
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
       slave:
-        password: 123456
-        username: root
-        jdbc-url: jdbc:mysql://172.16.98.130:3306/ydh2
         driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.16.98.135:3306/ydh2
+        username: root
+        password: 123456
+        type: com.alibaba.druid.pool.DruidDataSource
+        validationQuery: select '1'
+        initialSize: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+#        filters: stat,wall
+        filters: stat,wall,log4j
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #    url: jdbc:mysql://172.16.131.32:3306/ydh
 #    username: root
 #    password: 123456
-    type: com.alibaba.druid.pool.DruidDataSource
-    #连接池的配置信息
-    validationQuery: select 'x'
-    initialSize: 5
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 60000
-    minEvictableIdleTimeMillis: 300000
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-    poolPreparedStatements: true
-    maxPoolPreparedStatementPerConnectionSize: 20
-    filters: stat,wall,log4j
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    #连接池的配置信息
+#    validationQuery: select 'x'
+#    initialSize: 5
+#    maxActive: 20
+#    maxWait: 60000
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    testWhileIdle: true
+#    testOnBorrow: false
+#    testOnReturn: false
+#    poolPreparedStatements: true
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    filters: stat,wall,log4j
+#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 mybatis:
   configuration:
     map-underscore-to-camel-case=true: true # 返回结果驼峰
@@ -45,7 +80,7 @@ mybatis:
   type-aliases-package: com.ydh.redsheep.database.pojo # 转名字
 mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml
-  type-aliases-package: com.ydh.redsheep.base.pojo
+  type-aliases-package: com.ydh.redsheep.database.pojo
   configuration:
     map-underscore-to-camel-case: true
   global-config:
@@ -55,11 +90,6 @@ mybatis-plus:
 #      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
 #      table-prefix: "" # 前缀
 
-
-
-
 #日志
 logging:
-  # logback.xml的加载早于application.properties，所以如果在logback.xml中使用了变量，而恰好这个变量是写在application.properties时，
-  # 那么就会获取不到，只要改成logback-spring.xml就可以解决。
   config: classpath:log4j2.xml
