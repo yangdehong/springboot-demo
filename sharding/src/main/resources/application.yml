@@ -1,0 +1,30 @@
+server:
+  port: 80
+  servlet:
+    context-path: / #项目名称
+spring:
+  application:
+    name: sharding
+  profiles:
+    active: sharding
+  shardingsphere:
+    props:
+      sql:
+        show: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case=true: true # 返回结果驼峰
+  mapper-locations: mapper/*.xml            # xml文件
+  type-aliases-package: com.ydh.redsheep.sharding.pojo # 转名字
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.ydh.redsheep.sharding.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto    # 主键自增策略
+
+#日志
+logging:
+  config: classpath:log4j2.xml

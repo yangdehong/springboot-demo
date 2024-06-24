@@ -18,6 +18,7 @@ public class UserTest {
     public void curd() {
         // 插入
         User user = new User();
+        user.setId(99L);
         user.setAge(18);
         user.setEmail("test@ydh.cn");
         user.setName("ydh");

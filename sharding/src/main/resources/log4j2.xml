@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，当设置成trace时，
+ 你会看到log4j2内部各种详细输出。可以设置成OFF(关闭)或Error(只输出错误信息)
+-->
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="App">sharding</Property>
+        <Property name="logDir">../logs</Property>
+        <property name="logCharset">UTF-8</property>
+        <Property name="splitSize">30 MB</Property>
+        <Property name="fileNum">5</Property>
+        <Property name="patternFormat">%d{yyyy-mm-dd HH:mm:ss:SSS} [%t] %-5level %l - %m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- 输出控制台日志的配置 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!-- 输出日志的格式 -->
+            <PatternLayout charset="${logCharset}" pattern="${patternFormat}"/>
+        </Console>
+
+        <!--文件会打印出所有信息，这个log每次运行程序会自动清空，由append属性决定，适合临时测试用-->
+        <RollingFile name="${App}" fileName="${logDir}/${App}/${App}.log" filePattern="${logDir}/${App}/${App}.log.%d{yyyy-MM-dd}">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout charset="${logCharset}" pattern="${patternFormat}"/>
+            <Policies>
+                <CronTriggeringPolicy schedule="* */5 * * * ?"/>
+                <!--interval属性用来指定多久滚动一次，默认是1 hour-->
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="${splitSize}"/>
+            </Policies>
+        </RollingFile>
+
+        <!-- 这个会打印出所有的error及以下级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <RollingFile name="${App}-error" fileName="${logDir}/${App}/error.log" filePattern="${logDir}/${App}/${App}-error-%d{yyyy-MM-dd}_%i.log.gz">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <!--interval属性用来指定多久滚动一次，默认是1 hour-->
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="${splitSize}"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件开始覆盖-->
+            <DefaultRolloverStrategy max="15"/>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+        <!-- root logger 配置,全局配置，默认所有的Logger都继承此配置 -->
+        <!-- AsyncRoot - 异步记录日志 - 需要LMAX Disruptor的支持 -->
+        <Root level="all">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="${App}"/>
+            <AppenderRef ref="${App}-error"/>
+        </Root>
+        <!--第三方的软件日志级别，日志会上抛至root -->
+        <logger name="org.springframework" level="info" additivity="true"/>
+<!--        &lt;!&ndash; 日志不会上抛至root &ndash;&gt;-->
+<!--        <logger name="com.alibaba" level="info" additivity="false">-->
+<!--            <AppenderRef ref="rollingFileAlibaba"/>-->
+<!--        </logger>-->
+<!--        &lt;!&ndash; 日志会上抛至root &ndash;&gt;-->
+<!--        <logger name="org.apache.dubbo" level="info" additivity="true">-->
+<!--            <AppenderRef ref="rollingFileAlibaba"/>-->
+<!--        </logger>-->
+    </Loggers>
+</Configuration>

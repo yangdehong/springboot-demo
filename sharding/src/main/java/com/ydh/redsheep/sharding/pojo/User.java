@@ -1,4 +1,4 @@
-package com.ydh.redsheep.database.pojo;
+package com.ydh.redsheep.sharding.pojo;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
 *
@@ -21,7 +22,7 @@ import java.time.LocalDateTime;
 @TableName("user")
 public class User {
 
-    @TableId(type = IdType.INPUT) //指定id类型为自增长，可以在yml中配置全局策略
+//    @TableId(type = IdType.INPUT) //指定id类型为自增长，可以在yml中配置全局策略
     private Long id;
     private String name;
     private Integer age;
@@ -33,8 +34,8 @@ public class User {
 //            fill = FieldFill.INSERT, // 自动填充字段的时候
 //            numericScale = "4" // 小数保留的位数
 //    )
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private LocalDateTime birthDay;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date birthDay;
 
     @TableField(fill = FieldFill.INSERT)
     @Version

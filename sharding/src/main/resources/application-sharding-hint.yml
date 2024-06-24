@@ -1,0 +1,73 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: m0,s0,m1,s1
+      m0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.16.98.141:3306/ydh
+        type: com.alibaba.druid.pool.DruidDataSource
+        username: root
+        password: 123456
+      s0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.16.98.141:3306/ydh_s
+        type: com.alibaba.druid.pool.DruidDataSource
+        username: root
+        password: 123456
+      m1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.16.98.141:3306/ydh2
+        type: com.alibaba.druid.pool.DruidDataSource
+        username: root
+        password: 123456
+      s1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://172.16.98.141:3306/ydh2_s
+        type: com.alibaba.druid.pool.DruidDataSource
+        username: root
+        password: 123456
+    master-slave-rules: # 读写分离
+      master0:
+        load-balance-algorithm-type: ROUND_ROBIN
+        master-data-source-name: m0
+        slave-data-source-names: s0
+      master1:
+        load-balance-algorithm-type: ROUND_ROBIN
+        master-data-source-name: m1
+        slave-data-source-names: s1
+    sharding:
+      broadcast-tables: city
+      tables:
+        user:
+          database-strategy:
+            hint:
+              algorithm-class-name: com.ydh.redsheep.sharding.common.config.MyHintShardingAlgorithm
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+        user_detail:
+          database-strategy:
+            inline:
+              algorithm-expression: m${user_id % 2}
+              sharding-column: user_id
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+        city:
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+        t_order:
+          actual-data-nodes: m${0..1}.t_order${0..1}
+          database-strategy:
+            inline:
+              algorithm-expression: m$->{company_id % 2}
+              sharding-column: company_id
+          table-strategy:
+            inline:
+              algorithm-expression: t_order${id % 2}
+              sharding-column: id
+          key-generator:
+            column: id
+            type: SNOWFLAKE
+

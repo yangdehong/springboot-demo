@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -29,6 +30,13 @@ public class UserController {
     @GetMapping("get")
     public User get(){
         User user = userMapper.selectById(2L);
+        User user2 = new User();
+        user2.setId(99L);
+        user2.setAge(18);
+        user2.setEmail("test@ydh.cn");
+        user2.setName("ydh");
+        user2.setBirthDay(LocalDateTime.now());
+        userMapper.insert(user2);
         return user;
     }
 
