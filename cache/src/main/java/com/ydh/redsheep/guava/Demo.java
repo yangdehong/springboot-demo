@@ -1,7 +1,9 @@
-package com.ydh.redsheep.guava.demo;
+package com.ydh.redsheep.guava;
 
-import com.google.common.cache.*;
-import com.ydh.redsheep.guava.constants.Constants;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
+import com.google.common.cache.RemovalNotification;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -25,7 +27,7 @@ public class Demo {
                 // guava的解决方式是只有一个请求回源取数据，其他请求会阻塞(block)在一个固定时间段，如果在该时间段内没 有获得新值则返回旧值。
                 .refreshAfterWrite(1, TimeUnit.SECONDS)
                 // 等同于expire  ttl  缓存中对象的生命周期就是3秒
-//                .expireAfterWrite(3, TimeUnit.SECONDS)
+//                .expireAfterWrite(300, TimeUnit.SECONDS)
                 // 统计
                 .recordStats()
                 // 弱值的删除，可以通过weakKeys和weakValues方法指定Cache只保存对缓存记录key和value的弱引用。这样当没有其他强引用指向key和value时，key和value对象就会被垃圾回收器回收。
@@ -47,14 +49,13 @@ public class Demo {
         //显示缓存数据
         display(cache);
         //读取缓存中的1的数据    缓存有就读取 没有就返回null
-        System.out.println(cache.getIfPresent("1"));
+        System.out.println(cache.getIfPresent("5"));
 
         //读取4   读源并回写缓存  淘汰一个（LRU+FIFO）
         get("4",cache);
         display(cache);
         System.out.println("111111111111111111111");
 
-        System.out.println("222222222222222222222");
         // key=1在中间访问，剩余前面的1s时间就不算了，其他的歇了3.1秒
         Thread.sleep(1000);
         cache.getIfPresent("1");
@@ -86,7 +87,7 @@ public class Demo {
      * 初始化缓存三个
      */
     public static void initCache(LoadingCache<String,Object> cache) throws Exception {
-        for(int i=1;i<=3;i++){
+        for(int i=1;i<=5;i++){
             //连接数据源   如果缓存没有则读取数据源
             cache.get(String.valueOf(i));
         }
