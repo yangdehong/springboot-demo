@@ -16,7 +16,7 @@ spring:
         login-password: admin
       master:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://172.16.98.141:3306/ydh
+        url: jdbc:mysql://172.16.98.142:3306/ydh
         username: root
         password: 123456
         type: com.alibaba.druid.pool.DruidDataSource
@@ -36,7 +36,7 @@ spring:
         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
       slave:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://172.16.98.141:3306/ydh2
+        url: jdbc:mysql://172.16.98.142:3306/ydh2
         username: root
         password: 123456
         type: com.alibaba.druid.pool.DruidDataSource

@@ -13,7 +13,7 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserMapper userMapper;
 
-//    @Transactional
+    @Transactional
     @Override
     public void tx() {
         User user = userMapper.selectById(1L);
@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
         userMapper.updateById(user);
 //        userMapper.findAll();
         tx2();
-        int i = 1/0;
+//        int i = 1/0;
     }
     @Transactional
     @Override
@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
         User user = userMapper.selectById(2L);
         user.setAge(user.getAge()+1);
         userMapper.updateById(user);
-//        int i = 1/0;
+        int i = 1/0;
     }
 
 
