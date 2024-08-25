@@ -17,7 +17,7 @@ public class RedissonConfig {
                 .setRetryInterval(1000)
                 .setTimeout(3000)
                 .setConnectTimeout(10000)
-                .setAddress("redis://172.16.98.142:6379")
+                .setAddress("redis://127.0.0.1:6379")
                 .setPassword("123456")
                 .setDatabase(0);
 //        config.useClusterServers()
