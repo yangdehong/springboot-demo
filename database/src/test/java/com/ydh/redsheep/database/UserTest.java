@@ -1,7 +1,7 @@
 package com.ydh.redsheep.database;
 
 import com.ydh.redsheep.database.mapper.UserMapper;
-import com.ydh.redsheep.database.pojo.User;
+import com.ydh.redsheep.database.entity.po.UserPO;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -17,7 +17,7 @@ public class UserTest {
     @Test
     public void curd() {
         // 插入
-        User user = new User();
+        UserPO user = new UserPO();
         user.setId(99L);
         user.setAge(18);
         user.setEmail("test@ydh.cn");

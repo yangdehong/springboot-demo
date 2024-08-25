@@ -1,0 +1,8 @@
+#服务参数配置
+server:
+  port: 8199 #端口
+  context-path: / #项目名称
+
+
+
+

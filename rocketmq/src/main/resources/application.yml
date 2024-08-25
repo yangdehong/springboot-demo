@@ -1,0 +1,8 @@
+#############系统配置##################################
+spring:
+  application:
+    name: base
+  profiles:
+    active: dev #设置配置文件
+logging:
+  config: classpath:log4j2.xml
