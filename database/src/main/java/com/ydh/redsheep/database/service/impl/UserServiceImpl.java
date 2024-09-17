@@ -44,9 +44,7 @@ public class UserServiceImpl implements UserService {
     public PageInfo<UserPO> queryByPage(UserPO userPO) {
         PageHelper.startPage(2, 3);
         List<UserPO> userPOS = userMapper.queryAllByLimit(userPO);
-        PageInfo<UserPO> pageInfo = new PageInfo<>(userPOS);
-
-        return pageInfo;
+        return new PageInfo<>(userPOS);
     }
 
     /**

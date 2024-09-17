@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.cache.RedisCacheWriter;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
@@ -16,6 +17,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import javax.annotation.Resource;
+import javax.cache.CacheManager;
 import java.time.Duration;
 
 /**
@@ -51,8 +53,7 @@ public class RedisConfig {
                                                   redisConnectionFactory) {
         // 分别创建String和JSON格式序列化对象，对缓存数据key和value进行转换
         RedisSerializer<String> strSerializer = new StringRedisSerializer();
-        Jackson2JsonRedisSerializer jacksonSeial =
-                new Jackson2JsonRedisSerializer(Object.class);
+        Jackson2JsonRedisSerializer<Object> jacksonSeial = new Jackson2JsonRedisSerializer(Object.class);
         // 解决查询缓存转换异常的问题
         ObjectMapper om = new ObjectMapper();
         om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
@@ -62,14 +63,10 @@ public class RedisConfig {
         RedisCacheConfiguration config =
                 RedisCacheConfiguration.defaultCacheConfig()
                         .entryTtl(Duration.ofDays(1))
-                        .serializeKeysWith(RedisSerializationContext.SerializationPair
-                                .fromSerializer(strSerializer))
-                        .serializeValuesWith(RedisSerializationContext.SerializationPair
-                                .fromSerializer(jacksonSeial))
+                        .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(strSerializer))
+                        .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jacksonSeial))
                         .disableCachingNullValues();
-        RedisCacheManager cacheManager = RedisCacheManager
-                .builder(redisConnectionFactory).cacheDefaults(config).build();
-        return cacheManager;
+        return RedisCacheManager.builder(redisConnectionFactory).cacheDefaults(config).build();
     }
 
 }

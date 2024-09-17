@@ -3,13 +3,20 @@ package com.ydh.redsheep.database.controller;
 import com.github.pagehelper.PageInfo;
 import com.ydh.redsheep.database.common.aop.RoutingWith;
 import com.ydh.redsheep.database.common.bo.Result;
+import com.ydh.redsheep.database.common.bo.page.IPageable;
+import com.ydh.redsheep.database.common.bo.page.Pageable;
+import com.ydh.redsheep.database.common.converter.PageConverter;
+import com.ydh.redsheep.database.common.converter.UserConverter;
+import com.ydh.redsheep.database.common.utils.PageUtil;
 import com.ydh.redsheep.database.entity.po.UserPO;
+import com.ydh.redsheep.database.entity.vo.UserVO;
 import com.ydh.redsheep.database.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * (User)表控制层
@@ -33,8 +40,11 @@ public class UserController {
      * @return 查询结果
      */
     @GetMapping("queryByPage")
-    public Result<PageInfo<UserPO>> queryByPage(UserPO userPO) {
-        return Result.success(userService.queryByPage(userPO));
+    public Result<IPageable<UserVO>> queryByPage(UserPO userPO) {
+        PageInfo<UserPO> pageInfo = userService.queryByPage(userPO);
+        Pageable pageable = PageConverter.INSTANCE.pageInfo2Pageable(pageInfo);
+        pageable.setDatas(pageInfo.getList().stream().map(UserConverter.INSTANCE::userPO2UserVO).collect(Collectors.toList()));
+        return Result.success(pageable);
     }
 
     /**
@@ -100,6 +110,7 @@ public class UserController {
     public List<UserPO> findAllProductM() {
         return userService.findAll();
     }
+
     @RoutingWith("slaveDataSource")
     @GetMapping("/findAllS")
     public List<UserPO> findAllProductS() {

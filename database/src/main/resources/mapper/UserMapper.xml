@@ -15,26 +15,26 @@
         id,name,age,email,birth_day,version,is_deleted
         from user
         <where>
-            <if test="id != null">
-                and id = #{id}
+            <if test="entity.id != null">
+                and id = #{entity.id}
             </if>
-            <if test="name != null and name != ''">
-                and name = #{name}
+            <if test="entity.name != null and entity.name != ''">
+                and name = #{entity.name}
             </if>
-            <if test="age != null">
-                and age = #{age}
+            <if test="entity.age != null">
+                and age = #{entity.age}
             </if>
-            <if test="email != null and email != ''">
-                and email = #{email}
+            <if test="entity.email != null and entity.email != ''">
+                and email = #{entity.email}
             </if>
-            <if test="birthDay != null">
-                and birth_day = #{birthDay}
+            <if test="entity.birthDay != null">
+                and birth_day = #{entity.birthDay}
             </if>
-            <if test="version != null">
-                and version = #{version}
+            <if test="entity.version != null">
+                and version = #{entity.version}
             </if>
-            <if test="isDeleted != null">
-                and is_deleted = #{isDeleted}
+            <if test="entity.isDeleted != null">
+                and is_deleted = #{entity.isDeleted}
             </if>
         </where>
     </select>
